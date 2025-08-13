@@ -1,0 +1,48 @@
+{
+  "name": "tadka-tales-frontend",
+  "version": "1.0.0",
+  "description": "A beautiful recipe assistant web application with voice guidance and bilingual support",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "react",
+    "recipes",
+    "cooking",
+    "voice-assistant",
+    "bilingual"
+  ],
+  "author": "Tadka Tales Team",
+  "license": "MIT",
+  "dependencies": {
+    "@headlessui/react": "^2.2.7",
+    "@heroicons/react": "^2.2.0",
+    "autoprefixer": "^10.4.17",
+    "framer-motion": "^10.16.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "tailwindcss": "^3.4.14",
+    "web-vitals": "^3.5.2"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.35",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

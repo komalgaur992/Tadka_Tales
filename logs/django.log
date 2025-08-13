@@ -1,0 +1,396 @@
+INFO 2025-08-12 16:38:57,705 autoreload 195787 124447488352384 Watching for file changes with StatReloader
+INFO 2025-08-12 16:39:37,613 autoreload 195787 124447488352384 /home/komal/Desktop/Tadka_Tales/apps/users/admin.py changed, reloading.
+INFO 2025-08-12 16:39:37,967 autoreload 195858 125648150003840 Watching for file changes with StatReloader
+INFO 2025-08-12 16:39:58,046 autoreload 196244 133713617498240 Watching for file changes with StatReloader
+WARNING 2025-08-12 16:40:04,476 log 195858 125647984785088 Not Found: /
+WARNING 2025-08-12 16:40:04,477 basehttp 195858 125647984785088 "GET / HTTP/1.1" 404 2905
+WARNING 2025-08-12 16:40:04,749 log 195858 125647984785088 Not Found: /favicon.ico
+WARNING 2025-08-12 16:40:04,750 basehttp 195858 125647984785088 "GET /favicon.ico HTTP/1.1" 404 2956
+INFO 2025-08-12 16:40:41,179 autoreload 196815 129001848508544 Watching for file changes with StatReloader
+INFO 2025-08-12 16:41:42,292 autoreload 198660 127577952002176 Watching for file changes with StatReloader
+WARNING 2025-08-12 16:41:46,220 log 198660 127577855358656 Not Found: /
+WARNING 2025-08-12 16:41:46,220 basehttp 198660 127577855358656 "GET / HTTP/1.1" 404 2905
+INFO 2025-08-12 16:44:21,933 autoreload 198885 134922838573184 Watching for file changes with StatReloader
+INFO 2025-08-12 16:44:24,871 basehttp 198885 134922673059520 "GET / HTTP/1.1" 302 0
+INFO 2025-08-12 16:44:24,900 basehttp 198885 134922673059520 "GET /api/docs/ HTTP/1.1" 200 4457
+ERROR 2025-08-12 16:44:25,718 log 198885 134922673059520 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1012, in _map_basic_serializer
+    schema = self._map_serializer_field(field, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 659, in _map_serializer_field
+    component = self.resolve_serializer(field, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1012, in _map_basic_serializer
+    schema = self._map_serializer_field(field, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 659, in _map_serializer_field
+    component = self.resolve_serializer(field, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `phone_number` is not valid for model `User`.
+ERROR 2025-08-12 16:44:25,720 basehttp 198885 134922673059520 "GET /api/schema/ HTTP/1.1" 500 238224
+ERROR 2025-08-12 16:44:25,875 log 198885 134922673059520 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1012, in _map_basic_serializer
+    schema = self._map_serializer_field(field, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 659, in _map_serializer_field
+    component = self.resolve_serializer(field, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1012, in _map_basic_serializer
+    schema = self._map_serializer_field(field, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 659, in _map_serializer_field
+    component = self.resolve_serializer(field, direction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+                 ^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `phone_number` is not valid for model `User`.
+ERROR 2025-08-12 16:44:25,877 basehttp 198885 134922673059520 "GET /api/schema/ HTTP/1.1" 500 238224
+INFO 2025-08-12 16:48:15,362 autoreload 199317 129118806818944 Watching for file changes with StatReloader
+INFO 2025-08-12 16:48:19,456 basehttp 199317 129118641321664 "GET / HTTP/1.1" 302 0
+INFO 2025-08-12 16:48:19,482 basehttp 199317 129118641321664 "GET /api/docs/ HTTP/1.1" 200 4457
+ERROR 2025-08-12 16:48:19,819 log 199317 129118641321664 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 78, in get_operation
+    parameters = self._get_parameters()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 246, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 532, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django_filters/filterset.py", line 62, in __new__
+    new_class.base_filters = new_class.get_filters()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django_filters/filterset.py", line 349, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: author__username
+ERROR 2025-08-12 16:48:19,820 basehttp 199317 129118641321664 "GET /api/schema/ HTTP/1.1" 500 169613
+ERROR 2025-08-12 16:48:19,968 log 199317 129118641321664 Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 78, in get_operation
+    parameters = self._get_parameters()
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 246, in _get_parameters
+    **dict_helper(self._get_filter_parameters()),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/openapi.py", line 532, in _get_filter_parameters
+    parameters += filter_extension.get_schema_operation_parameters(self)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/drf_spectacular/contrib/django_filters.py", line 58, in get_schema_operation_parameters
+    filterset_class = self.target.get_filterset_class(auto_schema.view, get_manager(model).none())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django_filters/rest_framework/backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django_filters/filterset.py", line 62, in __new__
+    new_class.base_filters = new_class.get_filters()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/komal/Desktop/Tadka_Tales/venv/lib/python3.12/site-packages/django_filters/filterset.py", line 349, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: author__username
+ERROR 2025-08-12 16:48:19,969 basehttp 199317 129118641321664 "GET /api/schema/ HTTP/1.1" 500 169613
+INFO 2025-08-12 16:49:08,773 autoreload 199317 129118806818944 /home/komal/Desktop/Tadka_Tales/apps/recipes/views.py changed, reloading.
+INFO 2025-08-12 16:49:09,240 autoreload 199488 136506364276864 Watching for file changes with StatReloader
+INFO 2025-08-12 16:49:23,785 autoreload 199488 136506364276864 /home/komal/Desktop/Tadka_Tales/apps/users/models.py changed, reloading.
+INFO 2025-08-12 16:49:24,136 autoreload 199542 140223253491840 Watching for file changes with StatReloader
+INFO 2025-08-12 16:51:21,914 autoreload 196244 133713617498240 /home/komal/Desktop/Tadka_Tales/tadka_backend/settings.py changed, reloading.
+INFO 2025-08-12 16:51:22,101 autoreload 199665 137472870408320 Watching for file changes with StatReloader
+INFO 2025-08-12 16:51:22,552 autoreload 199542 140223253491840 /home/komal/Desktop/Tadka_Tales/tadka_backend/settings.py changed, reloading.
+INFO 2025-08-12 16:51:22,892 autoreload 199667 140714757255296 Watching for file changes with StatReloader
+INFO 2025-08-12 16:51:52,574 autoreload 199667 140714757255296 /home/komal/Desktop/Tadka_Tales/apps/voice_assistant/views.py changed, reloading.
+INFO 2025-08-12 16:51:52,967 autoreload 199761 139418251276416 Watching for file changes with StatReloader
+INFO 2025-08-12 16:52:36,905 autoreload 199761 139418251276416 /home/komal/Desktop/Tadka_Tales/apps/recipes/serializers.py changed, reloading.
+INFO 2025-08-12 16:52:37,308 autoreload 199822 132676666781824 Watching for file changes with StatReloader
+INFO 2025-08-12 16:52:52,843 autoreload 199822 132676666781824 /home/komal/Desktop/Tadka_Tales/tadka_backend/urls.py changed, reloading.
+INFO 2025-08-12 16:52:53,198 autoreload 199870 137409032102016 Watching for file changes with StatReloader
+INFO 2025-08-12 16:53:13,668 autoreload 199665 137472870408320 /home/komal/Desktop/Tadka_Tales/tadka_backend/settings.py changed, reloading.
+INFO 2025-08-12 16:53:13,831 autoreload 199870 137409032102016 /home/komal/Desktop/Tadka_Tales/tadka_backend/settings.py changed, reloading.
+INFO 2025-08-12 16:53:13,843 autoreload 199930 139974187032704 Watching for file changes with StatReloader
+INFO 2025-08-12 16:53:14,185 autoreload 199932 139137829568640 Watching for file changes with StatReloader
+INFO 2025-08-12 16:54:21,818 basehttp 199932 139137663366848 "GET / HTTP/1.1" 302 0
+INFO 2025-08-12 16:54:21,839 basehttp 199932 139137663366848 "GET /api/docs/ HTTP/1.1" 200 4457
+INFO 2025-08-12 16:54:22,324 basehttp 199932 139137663366848 "GET /api/schema/ HTTP/1.1" 200 99875
+INFO 2025-08-12 16:55:41,543 autoreload 199930 139974187032704 /home/komal/Desktop/Tadka_Tales/tadka_backend/settings.py changed, reloading.
+INFO 2025-08-12 16:55:41,717 autoreload 200312 127237695836288 Watching for file changes with StatReloader
+INFO 2025-08-12 17:20:19,124 autoreload 204697 137225924706432 Watching for file changes with StatReloader
+INFO 2025-08-12 17:20:26,582 basehttp 204697 137225828300480 "GET / HTTP/1.1" 302 0
+INFO 2025-08-12 17:20:26,614 basehttp 204697 137225828300480 "GET /api/docs/ HTTP/1.1" 200 4457
+INFO 2025-08-12 17:20:27,696 basehttp 204697 137225828300480 "GET /api/schema/ HTTP/1.1" 200 101789
+INFO 2025-08-12 17:20:45,162 basehttp 204697 137225740216000 "GET /api/recipes/ HTTP/1.1" 200 56
+INFO 2025-08-12 17:25:13,221 autoreload 205902 137980846870656 Watching for file changes with StatReloader
+INFO 2025-08-12 17:28:14,597 autoreload 206180 138400370786432 Watching for file changes with StatReloader
+INFO 2025-08-12 17:28:34,622 basehttp 206180 138400204060352 "GET / HTTP/1.1" 302 0
+INFO 2025-08-12 17:28:34,671 basehttp 206180 138400204060352 "GET /api/docs/ HTTP/1.1" 200 4457
+INFO 2025-08-12 17:28:35,788 basehttp 206180 138400204060352 "GET /api/schema/ HTTP/1.1" 200 101789
+INFO 2025-08-12 17:42:56,737 autoreload 206999 137553769308288 Watching for file changes with StatReloader
+INFO 2025-08-12 17:43:01,364 basehttp 206999 137553604769472 "GET / HTTP/1.1" 302 0
+INFO 2025-08-12 17:43:01,400 basehttp 206999 137553604769472 "GET /api/docs/ HTTP/1.1" 200 4457
+INFO 2025-08-12 17:43:02,544 basehttp 206999 137553604769472 "GET /api/schema/ HTTP/1.1" 200 101789
+INFO 2025-08-12 18:00:09,043 autoreload 209354 133461926645888 Watching for file changes with StatReloader
+INFO 2025-08-12 18:00:14,390 basehttp 209354 133461742450368 "GET / HTTP/1.1" 302 0
+INFO 2025-08-12 18:00:14,444 basehttp 209354 133461742450368 "GET /api/docs/ HTTP/1.1" 200 4457
+INFO 2025-08-12 18:00:15,395 basehttp 209354 133461742450368 "GET /api/schema/ HTTP/1.1" 200 99881
+WARNING 2025-08-12 18:00:23,676 log 209354 133461723567808 Method Not Allowed: /api/assistant/chat/
+WARNING 2025-08-12 18:00:23,677 basehttp 209354 133461723567808 "GET /api/assistant/chat/ HTTP/1.1" 405 122
+WARNING 2025-08-12 18:00:42,937 log 209354 133461723567808 Method Not Allowed: /api/assistant/chat/
+WARNING 2025-08-12 18:00:42,938 basehttp 209354 133461723567808 "GET /api/assistant/chat/ HTTP/1.1" 405 122
+WARNING 2025-08-12 18:01:55,534 log 209354 133461742450368 Method Not Allowed: /api/assistant/chat/
+WARNING 2025-08-12 18:01:55,535 basehttp 209354 133461742450368 "GET /api/assistant/chat/ HTTP/1.1" 405 122
+ERROR 2025-08-12 18:07:14,776 log 209354 133461734057664 Internal Server Error: /api/assistant/chat/
+ERROR 2025-08-12 18:07:14,777 basehttp 209354 133461734057664 "POST /api/assistant/chat/ HTTP/1.1" 500 487
+INFO 2025-08-12 18:18:38,841 autoreload 209354 133461926645888 /home/komal/Desktop/Tadka_Tales/apps/voice_assistant/views.py changed, reloading.
+INFO 2025-08-12 18:18:39,751 autoreload 210870 126633438253184 Watching for file changes with StatReloader
+INFO 2025-08-12 18:18:45,278 basehttp 210870 126633256154816 "GET / HTTP/1.1" 302 0
+INFO 2025-08-12 18:18:45,300 basehttp 210870 126633256154816 "GET /api/docs/ HTTP/1.1" 200 4457
+INFO 2025-08-12 18:18:46,066 basehttp 210870 126633256154816 "GET /api/schema/ HTTP/1.1" 200 99881
+WARNING 2025-08-12 18:19:21,789 log 210870 126633236223680 Method Not Allowed: /api/docs/
+WARNING 2025-08-12 18:19:21,790 basehttp 210870 126633236223680 "POST /api/docs/ HTTP/1.1" 405 22
+WARNING 2025-08-12 18:19:29,877 log 210870 126633236223680 Method Not Allowed: /api/docs/
+WARNING 2025-08-12 18:19:29,877 basehttp 210870 126633236223680 "POST /api/docs/ HTTP/1.1" 405 22
+WARNING 2025-08-12 18:20:08,933 log 210870 126633236223680 Method Not Allowed: /api/docs/
+WARNING 2025-08-12 18:20:08,934 basehttp 210870 126633236223680 "POST /api/docs/ HTTP/1.1" 405 22
+WARNING 2025-08-12 18:20:31,970 log 210870 126633236223680 Method Not Allowed: /api/docs/
+WARNING 2025-08-12 18:20:31,973 basehttp 210870 126633236223680 "POST /api/docs/ HTTP/1.1" 405 22
+WARNING 2025-08-12 18:23:48,570 log 210870 126633247762112 Method Not Allowed: /api/docs/
+WARNING 2025-08-12 18:23:48,573 basehttp 210870 126633247762112 "POST /api/docs/ HTTP/1.1" 405 22
+WARNING 2025-08-12 18:24:41,320 log 210870 126633247762112 Method Not Allowed: /api/docs/
+WARNING 2025-08-12 18:24:41,321 basehttp 210870 126633247762112 "POST /api/docs/ HTTP/1.1" 405 22
+INFO 2025-08-13 18:33:55,323 autoreload 35709 126201983938688 Watching for file changes with StatReloader
+INFO 2025-08-13 18:34:00,569 basehttp 35709 126201801733824 "GET / HTTP/1.1" 302 0
+INFO 2025-08-13 18:34:00,601 basehttp 35709 126201801733824 "GET /api/docs/ HTTP/1.1" 200 4457
+INFO 2025-08-13 18:34:01,878 basehttp 35709 126201801733824 "GET /api/schema/ HTTP/1.1" 200 99881
+WARNING 2025-08-13 18:34:48,529 log 35709 126201801733824 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 18:34:48,530 basehttp 35709 126201801733824 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 3272
+INFO 2025-08-13 18:36:48,967 autoreload 36164 124423104016512 Watching for file changes with StatReloader
+INFO 2025-08-13 18:37:28,049 basehttp 36164 124422920861376 "GET / HTTP/1.1" 302 0
+INFO 2025-08-13 18:37:28,071 basehttp 36164 124422920861376 "GET /api/docs/ HTTP/1.1" 200 4457
+INFO 2025-08-13 18:37:31,620 basehttp 36164 124422920861376 "GET /api/schema/ HTTP/1.1" 200 99881
